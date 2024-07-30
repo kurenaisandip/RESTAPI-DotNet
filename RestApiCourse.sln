@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.GettingStarted", "1.GettingStarted", "{437837AA-AECD-4F38-BBB5-AE8873E1DCCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{E206559B-5371-451B-AD2E-D5E304174D51}"
+	ProjectSection(SolutionItems) = preProject
+		Helpers\Course.postman_collection.json = Helpers\Course.postman_collection.json
+		Helpers\movies.json = Helpers\movies.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api", "1.GettingStarted\Movies.Api\Movies.Api.csproj", "{D91D688A-5A23-41C4-A6DE-AFA9D7E3B1D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Application", "1.GettingStarted\Movies.Application\Movies.Application.csproj", "{F91D89E3-FDC8-4157-8307-41005E54F886}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Contracts", "1.GettingStarted\Movies.Contracts\Movies.Contracts.csproj", "{4F95F410-EE85-4F95-B2B1-ABBB90D1EBE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D91D688A-5A23-41C4-A6DE-AFA9D7E3B1D3} = {437837AA-AECD-4F38-BBB5-AE8873E1DCCC}
+		{F91D89E3-FDC8-4157-8307-41005E54F886} = {437837AA-AECD-4F38-BBB5-AE8873E1DCCC}
+		{4F95F410-EE85-4F95-B2B1-ABBB90D1EBE8} = {437837AA-AECD-4F38-BBB5-AE8873E1DCCC}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D91D688A-5A23-41C4-A6DE-AFA9D7E3B1D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91D688A-5A23-41C4-A6DE-AFA9D7E3B1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91D688A-5A23-41C4-A6DE-AFA9D7E3B1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91D688A-5A23-41C4-A6DE-AFA9D7E3B1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91D89E3-FDC8-4157-8307-41005E54F886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91D89E3-FDC8-4157-8307-41005E54F886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91D89E3-FDC8-4157-8307-41005E54F886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91D89E3-FDC8-4157-8307-41005E54F886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F95F410-EE85-4F95-B2B1-ABBB90D1EBE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F95F410-EE85-4F95-B2B1-ABBB90D1EBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F95F410-EE85-4F95-B2B1-ABBB90D1EBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F95F410-EE85-4F95-B2B1-ABBB90D1EBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
