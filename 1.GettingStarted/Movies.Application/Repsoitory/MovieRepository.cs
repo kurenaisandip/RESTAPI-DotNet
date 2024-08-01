@@ -1,11 +1,11 @@
 ﻿using Movies.Application.Models;
 
-namespace Movies.Application.Repsoitory;
+namespace Movies.Application.Repositories;
 
 public class MovieRepository : IMovieRepository
 {
     private readonly List<Movie> _movies = new();
-    
+
     public Task<bool> CreateAsync(Movie movie)
     {
         _movies.Add(movie);
@@ -30,6 +30,7 @@ public class MovieRepository : IMovieRepository
         {
             return Task.FromResult(false);
         }
+
         _movies[movieIndex] = movie;
         return Task.FromResult(true);
     }
@@ -37,7 +38,7 @@ public class MovieRepository : IMovieRepository
     public Task<bool> DeleteByIdAsync(Guid id)
     {
         var removedCount = _movies.RemoveAll(x => x.Id == id);
-        var movieRemoved = removedCount > 0;
+        var movieRemoved = removedCount > 0; 
         return Task.FromResult(movieRemoved);
     }
 }
