@@ -10,7 +10,7 @@ public static class ApiEndPoints
 
   public const string Create = Base;
   
-  public const string Get = $"{Base}/{{id:Guid}}";
+  public const string Get = $"{Base}/{{idOrSlug}}";
 
   public const string GetAll = Base;
   

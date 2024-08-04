@@ -18,6 +18,8 @@ public class MovieRepository : IMovieRepository
         return Task.FromResult(movie);
     }
 
+  
+
     public Task<IEnumerable<Movie>> GetAllAsync()
     {
         return Task.FromResult(_movies.AsEnumerable());
@@ -40,5 +42,12 @@ public class MovieRepository : IMovieRepository
         var removedCount = _movies.RemoveAll(x => x.Id == id);
         var movieRemoved = removedCount > 0; 
         return Task.FromResult(movieRemoved);
+    }
+    
+    
+    public Task<Movie?> GetBySlug(string slug)
+    {
+        var movie = _movies.SingleOrDefault(x => x.Slug == slug);
+        return Task.FromResult(movie);
     }
 }
