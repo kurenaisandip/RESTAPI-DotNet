@@ -47,5 +47,20 @@ public class MovieController : ControllerBase
         return Ok(moviesResponse);
     }
 
+    [HttpPut(ApiEndPoints.Movies.Update)]
+    public async Task<IActionResult> Update([FromRoute]Guid id,[FromBody]UpdateMovieRequest request)
+    {
+        //map the movie object to new domain object
+        var movie = request.MapToMovie(id);
+        var updated = await _movieRepository.UpdateAsync(movie);
+        if (!updated)
+        {
+            return NotFound();
+        }
+
+        var response = movie.MapToResponse();
+        return Ok(response);
+    }
+
 
 }

@@ -15,7 +15,8 @@ public static class ContractMapping
             YearOfRelease = request.YearOfRelease,
             Genres = request.Genres.ToList()
         };
-    }
+    }  
+
     
     public static Movie MapToMovie(this UpdateMovieRequest request, Guid id)
     {
