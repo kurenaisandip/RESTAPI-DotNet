@@ -18,10 +18,4 @@
       <ProjectReference Include="..\Movies.Contracts\Movies.Contracts.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Include="..\..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-
 </Project>
