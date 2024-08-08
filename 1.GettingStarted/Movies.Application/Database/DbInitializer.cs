@@ -30,5 +30,11 @@ public class DbInitializer
                                       on movies
                                       using btree (slug); 
                                       """);
+        
+        await connection.ExecuteAsync("""
+                                          CREATE TABLE IF NOT EXISTS genres (
+                                             movieId UUID references movies(id),
+                                              name TEXT NOT NULL);
+                                      """);
     }
 }
