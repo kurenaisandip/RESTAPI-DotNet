@@ -139,7 +139,7 @@ public class MovieRepository : IMovieRepository
     }
 
 
-    public async Task<Movie?> GetBySlug(string slug)
+    public async Task<Movie?> GetBySlugAsync(string slug)
     {
         using var connection = await _dbConnectionFactory.CreateConnectionAsync();
         var movie = await connection.QuerySingleOrDefaultAsync<Movie>(new CommandDefinition("""

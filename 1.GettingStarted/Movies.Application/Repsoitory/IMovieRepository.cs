@@ -7,7 +7,7 @@ public interface IMovieRepository
     Task<bool> CreateAsync(Movie movie);
     
     Task<Movie?> GetByIdAsync(Guid id);
-    Task<Movie?> GetBySlug(string slug);
+    Task<Movie?> GetBySlugAsync(string slug);
     
     Task<IEnumerable<Movie>> GetAllAsync();
     

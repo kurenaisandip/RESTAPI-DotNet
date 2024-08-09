@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Movies.Api.Mapping;
 using Movies.Application;
 using Movies.Application.Database;
 
@@ -25,7 +26,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
  app.UseAuthorization();
-//
+
+// Add the middleware to the pipeline
+// this needs to be before the MapControllers() call as it is squential
+ app.UseMiddleware<ValidationMappingMiddleware>();
 app.MapControllers();
 
 var dbInitializer = app.Services.GetRequiredService<DbInitializer>();
